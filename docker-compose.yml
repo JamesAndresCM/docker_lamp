@@ -1,0 +1,16 @@
+apache-php:
+        build: apache/ 
+        ports:
+                - '8080:80'
+        volumes: 
+                - ./apache/data:/var/www/html
+        links:
+                - debdatabase
+
+debdatabase:
+        build: mysql/
+        ports:
+                - '3306:3306'
+        volumes:
+                - ./mysql/data:/var/lib/mysql
+

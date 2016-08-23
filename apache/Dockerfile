@@ -25,6 +25,7 @@ RUN sed -i 's/'table_uiprefs'/'pma__table_uiprefs'/' /etc/phpmyadmin/config.inc.
 RUN sed -i 's/'recent'/'pma__recent'/' /etc/phpmyadmin/config.inc.php
 RUN sed -i 's/$dbuser/'"''"'/' /etc/phpmyadmin/config.inc.php
 RUN sed -i 's/$dbpass/'"''"'/' /etc/phpmyadmin/config.inc.php
+RUN sed -i 's/upload_max_filesize = 2M/upload_max_filesize = 50M/' /etc/php5/apache2/php.ini
 RUN echo '$cfg['"'Servers'"'][$i]['"'host'"'] = '"'debdatabase'"';' >> /etc/phpmyadmin/config.inc.php
 
 

@@ -4,10 +4,6 @@ Execute : docker-compose build; docker-compose up;
 
 User for mysql is "root" and Password is "toor" :
 
-PhpMyadmin
-
-<img src="http://i.imgur.com/v1zJqPb.png"/>
-
 Apache 
 
 <img src="http://i.imgur.com/6HwP9I0.png" />

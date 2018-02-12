@@ -2,7 +2,9 @@
 
 Execute : `docker-compose build; docker-compose up -d;`
 
-User for mysql is "root" and Password is "toor" :
+***
+
+User for mysql is `root` and Password is `toor`
 
 ***
 

@@ -2,7 +2,7 @@
 
 Execute : docker-compose build; docker-compose up;
 
-User for mysql is "root" and Password is "toor" , the remote connection is available on "debdatabase" :
+User for mysql is "root" and Password is "toor" :
 
 PhpMyadmin
 
@@ -12,7 +12,7 @@ Apache
 
 <img src="http://i.imgur.com/6HwP9I0.png" />
 
-Copy your proyects to apache/data
+Copy your proyects to www
 
-Data bases it's available into folder mysql/data
+Data bases it's available into folder data
 

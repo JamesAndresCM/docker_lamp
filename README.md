@@ -8,7 +8,5 @@ Apache
 
 <img src="http://i.imgur.com/6HwP9I0.png" />
 
-Copy your proyects to www
-
-Data bases it's available into folder data
+Copy your proyects to www and data is folder to databases.
 

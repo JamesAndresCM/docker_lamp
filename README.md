@@ -10,3 +10,7 @@ Apache
 
 Copy your proyects to www and data is folder to databases.
 
+- Phpmyadmin port 8000
+- Apache port 8080
+- Mariadb port 3306
+

@@ -1,16 +1,37 @@
-apache-php:
-        build: apache/ 
-        ports:
-                - '8080:80'
-        volumes: 
-                - ./apache/data:/var/www/html
-        links:
-                - debdatabase
-
-debdatabase:
-        build: mysql/
-        ports:
-                - '3306:3306'
+version: "2"
+services:
+    www:
+        build: .
+        ports: 
+            - "8080:80"
         volumes:
-                - ./mysql/data:/var/lib/mysql
-
+            - ./www:/var/www/html
+        links:
+            - db
+        networks:
+            - default
+    db:
+        image: mariadb
+        ports: 
+            - "3306:3306"
+        environment:
+            MYSQL_USER: user_bd
+            MYSQL_PASSWORD: user_bd
+            MYSQL_ROOT_PASSWORD: toor
+        volumes:
+            - ./data:/var/lib/mysql
+            - persistent:/var/lib/mysql
+        networks:
+            - default
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        links: 
+            - db:db
+        ports:
+            - 8000:80
+        environment:
+            MYSQL_USER: user_bd
+            MYSQL_PASSWORD: user_bd
+            MYSQL_ROOT_PASSWORD: toor 
+volumes:
+  persistent:

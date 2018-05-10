@@ -1,4 +1,4 @@
-# docker_lamp
+# Docker lamp
 
 Execute : `docker-compose build; docker-compose up -d;`
 
